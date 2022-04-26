@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Login Folding to Terminal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header><span class="t-login">LOGIN</span> <span class="t-terminal">TERMINAL</span></header>
+
+<section class="login">
+	<div class="icon">
+		<span></span>
+	</div>
+	<div class="user">
+		<span>
+			<input id="user" type="text" maxlength="8" tabindex="1" spellcheck="false">
+		</span>
+	</div>
+	<div class="pass">
+		<span>
+			<input id="pass" type="password" maxlength="8" tabindex="2" spellcheck="false">
+		</span>
+	</div>
+	<div class="btn">
+		<span>
+			<button id="log-in" type="submit" tabindex="3">V</button>
+		</span>
+	</div>
+</section>
+	
+<section class="logged">
+	<div>LOGGED IN AS : <strong id="user-logged"></strong></div>
+	<div class="terminal"> 
+		<span class="data">
+			Last login: <span id="date"></span> from 127.0.0.1<br>
+			<span id="user-name"></span>@terminal:~$
+		</span>
+		<textarea spellcheck="false"></textarea>
+	</div>
+</section>
+
+<div id="warning">
+	<div>Error</div>
+	<div>Empty <span id="error">Username</span></div>
+	<div><span class="try">Try Again</span></div>
+</div>
+
+<footer><button onclick="history.go(0)">EXIT</button></footer>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
